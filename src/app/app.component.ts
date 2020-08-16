@@ -42,7 +42,7 @@ export class AppComponent implements OnInit{
     this.insertRecord(form);
   }
   else{
-    this.toastr.error('Что-то не так......', 'Произошла ошибка!');
+    this.toastr.error('Что-то пошло не так......', 'Произошла ошибка!');
   }
 
   }
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit{
     this.service.postWord().subscribe(
       res => {
        // this.resetForm(form);
-        this.toastr.success('Submitted successfully', 'Worker has been registered');
+        this.toastr.success('Запрос сделан успешно', 'Данные получены');
         console.log('словарь', res);
        // this.service.refreshList();
       },
